@@ -12,9 +12,9 @@
     </main>
 
     <div class="fixed-action-btn">
-      <a class="btn-floating btn-large blue" href="#">
+      <RouterLink class="btn-floating btn-large blue" to="/record">
         <i class="large material-icons">add</i>
-      </a>
+      </RouterLink>
     </div>
   </div>
 </template>
