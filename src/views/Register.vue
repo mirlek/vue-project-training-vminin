@@ -123,7 +123,7 @@ export default {
     },
   },
   methods: {
-    submitHandler() {
+    async submitHandler() {
       console.log(this.v$);
       if (this.v$.$invalid) {
         this.v$.$touch();
@@ -135,8 +135,11 @@ export default {
         name: this.name
       };
 
-      console.log(formData);
+      try{
+        await this.$store.dispatch('register', formData)
       this.$router.push("/");
+      } catch (e) {}
+      
     },
   },
 };
